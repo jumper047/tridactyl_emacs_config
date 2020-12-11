@@ -1,0 +1,96 @@
+" Unbinding keys used both emacs and vim
+unbind w
+unbind <C-u>
+unbind <C-x>
+unbind <C-g>
+unbind <C-Space>
+
+" Ctrl-g is your friend (and hardcoded <C-,> of course)
+bind <C-g> composite clearsearchhighlight | escapehatch
+
+" Navigation
+bind --mode=normal <C-v> scrollpage 1
+bind --mode=normal <A-v> scrollpage -1
+bind --mode=normal <Backspace> scrollpage -1
+bind --mode=normal <A->> scrollto 100
+bind --mode=normal <A-<> scrollto 0
+bind --mode=normal <C-n> scrollline 10
+bind --mode=normal <C-p> scrollline -10
+bind --mode=normal <C-u><C-Space> jumpprev
+
+" Commands
+bind <A-x> fillcmdline_notrail
+
+" Searching
+" Fallback solution is / for find and win-G/win-g to select result
+bind --mode=normal <C-s> fillcmdline find
+bind --mode=ex <C-s> findnext 1
+bind --mode=ex <C-r> findnext -1
+
+" Hinting and navigation
+bind --mode=normal f hint
+bind --mode=normal <C-u>f hint -b
+bind --mode=hint <C-g> hint.reset
+bind --mode=normal c hint -y
+bind --mode=normal w clipboard yank
+bind <C-c><C-n> followpage next
+bind <C-c><C-p> followpage prev
+
+" History
+bind --mode=normal F forward
+bind --mode=normal B back
+
+" Bookmarks
+bind --mode=normal M current_url bmark
+bind --mode=normal <C-x>rj bmarks
+bind --mode=normal <C-x>rm current_url bmark
+
+" Tabs
+bind <A-n> tabnext
+bind <A-p> tabprev
+bind <A-N> tabmove +1
+bind <A-P> tabmove -1
+bind <C-x>b fillcmdline buffer
+bind <C-x>k tabclose
+bind <C-x>0 tabclose
+bind --mode=normal q tabclose
+bind <C-x>0 tabclose
+bind <C-x>1 tabonly
+bind <C-x>tp pin
+bind <C-x>tm mute toggle
+bind <C-x>u undo
+bind <C-/> undo
+
+" Pages
+bind --mode=normal R reload
+bind --mode=normal + zoom 0.1 true
+bind --mode=normal - zoom -0.1 true
+bind --mode=normal = zoom 1
+
+" Frames
+bind <C-x>50 winclose
+bind <C-x>52 winopen
+bind <C-x><C-u>52 winopen -private
+
+" Open links
+bind --mode=normal g fillcmdline open
+bind --mode=normal <C-u>0g current_url open
+bind --mode=normal <C-u>g fillcmdline tabopen
+
+" Selection
+bind --mode=normal <C-Space> hint -h
+bind --mode=visual <C-g> composite js document.getSelection().empty(); mode normal; hidecmdline
+bind --mode=visual <C-n> js document.getSelection().modify("extend","forward","line")
+bind --mode=visual <C-p> js document.getSelection().modify("extend","backward","line")
+bind --mode=visual <C-b> js document.getSelection().modify("extend","backward","character")
+bind --mode=visual <C-f> js document.getSelection().modify("extend","forward","character")
+bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","word")
+bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
+bind <A-w> --mode=visual composite js document.getSelection().toString() | clipboard yank
+
+" Commands
+bind --mode=ex <C-n> ex.next_completion
+bind --mode=ex <C-p> ex.prev_completion
+bind --mode=ex <A-n> ex.next_history
+bind --mode=ex <A-p> ex.prev_history
+bind --mode=ex <C-g> ex.hide_and_clear
