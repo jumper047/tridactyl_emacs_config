@@ -88,6 +88,12 @@ bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","w
 bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
 bind <A-w> --mode=visual composite js document.getSelection().toString() | clipboard yank
 
+" Help
+bind <C-h><h> help
+bind <C-h><b> fillcmdline help -b
+bind <C-h><f> fillcmdline help -e
+bind <C-h><v> fillcmdline help -s
+
 " Commands
 bind --mode=ex <C-n> ex.next_completion
 bind --mode=ex <C-p> ex.prev_completion
