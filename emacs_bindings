@@ -77,6 +77,28 @@ bind --mode=normal g fillcmdline open
 bind --mode=normal <C-u>0g current_url open
 bind --mode=normal <C-u>g fillcmdline tabopen
 
+" Textfields
+bind --mode=insert <C-d> text.delete_char
+bind --mode=insert <C-t> text.transpose_char
+bind --mode=insert <A-t> text.transpose_words
+bind --mode=insert <A-u> text.upcase_word
+bind --mode=insert <A-l> text.downcase_word
+bind --mode=insert <A-c> text.capitalize_word
+bind --mode=insert <C-k> text.kill_line
+bind --mode=insert <A-0><C-k> text.backward_kill_line
+bind --mode=insert <C-u>0<C-k> text.backward_kill_line
+bind --mode=insert <CS-Backspace> text.kill_whole_line
+bind --mode=insert <A-d> text.kill_word
+bind --mode=insert <A-Backspace> text.backward_kill_word
+bind --mode=insert <C-a> text.beginning_of_line
+bind --mode=insert <C-e> text.end_of_line
+bind --mode=insert <C-f> text.forward_char
+bind --mode=insert <C-b> text.backward_char
+bind --mode=insert <A-f> text.forward_word
+bind --mode=insert <A-b> text.backward_word
+bind --mode=insert <C-y> text.insert_text
+bind --mode=insert <C-g> composite unfocus | mode normal
+
 " Selection
 bind --mode=normal <C-Space> hint -h
 bind --mode=visual <C-g> composite js document.getSelection().empty(); mode normal; hidecmdline
