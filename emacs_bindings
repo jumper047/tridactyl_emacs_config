@@ -9,41 +9,41 @@ unbind <C-Space>
 bind <C-g> composite clearsearchhighlight | escapehatch
 
 " Navigation
-bind --mode=normal <C-v> scrollpage 1
-bind --mode=normal <A-v> scrollpage -1
-bind --mode=normal <Backspace> scrollpage -1
-bind --mode=normal <A->> scrollto 100
-bind --mode=normal <A-<> scrollto 0
-bind --mode=normal <C-n> scrollline 10
-bind --mode=normal <C-p> scrollline -10
-bind --mode=normal <C-u><C-Space> jumpprev
+bind <C-v> scrollpage 1
+bind <A-v> scrollpage -1
+bind <Backspace> scrollpage -1
+bind <A->> scrollto 100
+bind <A-<> scrollto 0
+bind <C-n> scrollline 10
+bind <C-p> scrollline -10
+bind <C-u><C-Space> jumpprev
 
 " Commands
 bind <A-x> fillcmdline_notrail
 
 " Searching
 " Fallback solution is / for find and win-G/win-g to select result
-bind --mode=normal <C-s> fillcmdline find
+bind <C-s> fillcmdline find
 bind --mode=ex <C-s> findnext 1
 bind --mode=ex <C-r> findnext -1
 
 " Hinting and navigation
-bind --mode=normal f hint
-bind --mode=normal <C-u>f hint -b
+bind f hint
+bind <C-u>f hint -b
 bind --mode=hint <C-g> hint.reset
-bind --mode=normal c hint -y
-bind --mode=normal w clipboard yank
+bind c hint -y
+bind w clipboard yank
 bind <C-c><C-n> followpage next
 bind <C-c><C-p> followpage prev
 
 " History
-bind --mode=normal F forward
-bind --mode=normal B back
+bind F forward
+bind B back
 
 " Bookmarks
-bind --mode=normal M current_url bmark
-bind --mode=normal <C-x>rj bmarks
-bind --mode=normal <C-x>rm current_url bmark
+bind M current_url bmark
+bind <C-x>rj bmarks
+bind <C-x>rm current_url bmark
 
 " Tabs
 bind <A-n> tabnext
@@ -53,7 +53,7 @@ bind <A-P> tabmove -1
 bind <C-x>b fillcmdline buffer
 bind <C-x>k tabclose
 bind <C-x>0 tabclose
-bind --mode=normal q tabclose
+bind q tabclose
 bind <C-x>0 tabclose
 bind <C-x>1 tabonly
 bind <C-x>tp pin
@@ -62,10 +62,10 @@ bind <C-x>u undo
 bind <C-/> undo
 
 " Pages
-bind --mode=normal R reload
-bind --mode=normal + zoom 0.1 true
-bind --mode=normal - zoom -0.1 true
-bind --mode=normal = zoom 1
+bind R reload
+bind + zoom 0.1 true
+bind - zoom -0.1 true
+bind = zoom 1
 
 " Frames
 bind <C-x>50 winclose
@@ -73,9 +73,9 @@ bind <C-x>52 winopen
 bind <C-x><C-u>52 winopen -private
 
 " Open links
-bind --mode=normal g fillcmdline open
-bind --mode=normal <C-u>0g current_url open
-bind --mode=normal <C-u>g fillcmdline tabopen
+bind g fillcmdline open
+bind <C-u>0g current_url open
+bind <C-u>g fillcmdline tabopen
 
 " Textfields
 bind --mode=insert <C-d> text.delete_char
@@ -100,7 +100,7 @@ bind --mode=insert <C-y> text.insert_text
 bind --mode=insert <C-g> composite unfocus | mode normal
 
 " Selection
-bind --mode=normal <C-Space> hint -h
+bind <C-Space> hint -h
 bind --mode=visual <C-g> composite js document.getSelection().empty(); mode normal; hidecmdline
 bind --mode=visual <C-n> js document.getSelection().modify("extend","forward","line")
 bind --mode=visual <C-p> js document.getSelection().modify("extend","backward","line")
