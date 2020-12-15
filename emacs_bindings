@@ -122,3 +122,5 @@ bind --mode=ex <C-p> ex.prev_completion
 bind --mode=ex <A-n> ex.next_history
 bind --mode=ex <A-p> ex.prev_history
 bind --mode=ex <C-g> ex.hide_and_clear
+bind --mode=ex <C-f> text.forward_char
+bind --mode=ex <C-b> text.backward_char
