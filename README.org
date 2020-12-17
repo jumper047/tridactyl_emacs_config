@@ -4,13 +4,19 @@ Starting point for customizing Tridactyl to mimic Emacs
 ** Installation
 First thing you need to change default Firefox bindings like Ctrl-N. It is impossible to change or disable that bindings, but you can change the modifier key used in that bindings instead. Go to about:config page and set ui.key.accelKey to 91 (WinKey). You can find more keycodes here - [[https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode]], but seems like WinKey is optimal choice because both Ctrl- and Alt- bindings are needed. 
 
-Install Firefox extension [[https://github.com/tridactyl/tridactyl][Tridactyl]]. Then you need to install native messenger - it is necessary to be able to use config files. In Tridactyl enter to command mode (Shift-:), enter command "installnative" and follow instructions you'll receive. 
+Install Firefox extension [[https://github.com/tridactyl/tridactyl][Tridactyl]]. Now you have two options - use configuration file or applying binding directly from github. For first option you need to install native messenger - it is necessary to be able to use config files. In Tridactyl enter to command mode (Shift-:), enter command "installnative" and follow instructions you'll receive. 
 
 Copy emacs_bindings to ~/.config/tirdactyl and add this string to your tridactylrc
 #+begin_src 
 source ~/.config/tridactyl/emacs_bindings
 #+end_src
 Also you can just copy file content to your config directly.
+
+Second option is rather shorter - execute command 
+#+begin_src 
+source --url https://raw.githubusercontent.com/jumper047/tridactyl_emacs_config/main/emacs_bindings
+#+end_src
+Later you can update your bindings with M-x 'emacs-bindings-update'
 
 ** Contributions
 Are welcome! I think of these bindings as a base to someone's own customization, but if I missed some common default binding, or some nice trick - please open PR/issue!

@@ -6,7 +6,7 @@ unbind <C-g>
 unbind <C-Space>
 
 " Ctrl-g is your friend (and hardcoded <C-,> of course)
-bind <C-g> composite clearsearchhighlight | escapehatch
+bind --mode=browser <C-g> composite escapehatch | clearsearchhighlight
 
 " Navigation
 bind <C-v> scrollpage 1
@@ -124,3 +124,6 @@ bind --mode=ex <A-p> ex.prev_history
 bind --mode=ex <C-g> ex.hide_and_clear
 bind --mode=ex <C-f> text.forward_char
 bind --mode=ex <C-b> text.backward_char
+
+" Functions
+command emacs-bindings-update source --url https://raw.githubusercontent.com/jumper047/tridactyl_emacs_config/main/emacs_bindings
