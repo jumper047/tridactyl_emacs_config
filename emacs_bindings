@@ -108,7 +108,7 @@ bind --mode=visual <C-b> js document.getSelection().modify("extend","backward","
 bind --mode=visual <C-f> js document.getSelection().modify("extend","forward","character")
 bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","word")
 bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
-bind <A-w> --mode=visual composite js document.getSelection().toString() | clipboard yank
+bind --mode=visual <A-w> composite js document.getSelection().toString() | clipboard yank
 
 " Help
 bind <C-h><h> help
