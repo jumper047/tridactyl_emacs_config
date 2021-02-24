@@ -42,7 +42,8 @@ bind B back
 
 " Bookmarks
 bind M current_url bmark
-bind <C-x>rj bmarks
+bind <C-x>rj fillcmdline bmarks
+bind <C-u><C-x>rj fillcmdline bmarks -t
 bind <C-x>rm current_url bmark
 
 " Tabs
