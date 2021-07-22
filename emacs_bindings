@@ -6,7 +6,7 @@ unbind <C-g>
 unbind <C-Space>
 
 " Ctrl-g is your friend (and hardcoded <C-,> of course)
-bind --mode=browser <C-g> composite escapehatch | clearsearchhighlight
+bind --mode=browser <C-g> escapehatch
 
 " Navigation
 bind <C-v> scrollpage 1
