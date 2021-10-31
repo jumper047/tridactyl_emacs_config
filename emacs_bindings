@@ -76,6 +76,7 @@ bind <C-x>0 tabclose
 bind <C-x>1 tabonly
 bind <C-x>tp pin
 bind <C-x>tm mute toggle
+bind <A-g>a tabaudio
 bind <C-x>u undo
 bind <C-/> undo
 
