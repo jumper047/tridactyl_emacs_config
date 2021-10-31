@@ -20,6 +20,14 @@ bind <A-<> scrollto 0
 bind <C-n> scrollline 10
 bind <C-p> scrollline -10
 bind <C-u><C-Space> jumpprev
+bind n followpage next
+bind p followpage prev
+" bindings below remains same for
+" backward compatibility reasons.
+" should be removed some day
+bind <C-c><C-n> followpage next
+bind <C-c><C-p> followpage prev
+
 
 " Commands
 bind <A-x> fillcmdline_notrail
@@ -30,18 +38,20 @@ bind <C-s> fillcmdline find
 bind --mode=ex <C-s> findnext 1
 bind --mode=ex <C-r> findnext -1
 
-" Hinting and navigation
+" Hinting
 bind f hint
 bind <C-u>f hint -b
 bind --mode=hint <C-g> hint.reset
 bind c hint -y
 bind w clipboard yank
-bind <C-c><C-n> followpage next
-bind <C-c><C-p> followpage prev
 
 " History
 bind F forward
+bind r forward
 bind B back
+bind l back
+bind u urlparent
+bind t urlroot
 
 " Bookmarks
 bind M current_url bmark
