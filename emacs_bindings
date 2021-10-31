@@ -1,3 +1,6 @@
+" Set external editor command
+set editorcmd emacsclient -a \"\" -c -e '(progn (find-file "%f") (forward-line (1- %l)) (forward-char %c))'
+
 " Unbinding keys used both emacs and vim
 unbind w
 unbind <C-u>
@@ -110,6 +113,10 @@ bind --mode=visual <C-f> js document.getSelection().modify("extend","forward","c
 bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","word")
 bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
 bind --mode=visual <A-w> composite js document.getSelection().toString() | clipboard yank
+
+" Edit field in external editor
+bind --mode=insert <C-c><C-c> editor
+bind --mode=input <C-c><C-c> editor
 
 " Help
 bind <C-h><h> help
