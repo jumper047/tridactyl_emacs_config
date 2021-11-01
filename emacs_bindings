@@ -72,7 +72,6 @@ bind <C-x>b fillcmdline buffer
 bind <C-x>k tabclose
 bind <C-x>0 tabclose
 bind q tabclose
-bind <C-x>0 tabclose
 bind <C-x>1 tabonly
 bind <C-x>tp pin
 bind <C-x>tm mute toggle
