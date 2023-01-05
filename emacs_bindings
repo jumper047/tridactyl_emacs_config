@@ -36,7 +36,7 @@ bind <A-x> fillcmdline_notrail
 " Fallback solution is / for find and win-G/win-g to select result
 bind <C-s> fillcmdline find
 bind --mode=ex <C-s> findnext 1
-bind --mode=ex <C-r> findnext -1
+bind --mode=ex <C-r> findnext --reverse
 
 " Hinting
 bind f hint
