@@ -6,7 +6,7 @@ First thing you need to change default Firefox bindings like Ctrl-N. It is impos
 
 Install Firefox extension [[https://github.com/tridactyl/tridactyl][Tridactyl]]. Now you have two options - use configuration file or applying binding directly from github. For first option you need to install native messenger - it is necessary to be able to use config files. In Tridactyl enter to command mode (Shift-:), enter command "installnative" and follow instructions you'll receive. 
 
-Copy emacs_bindings to ~/.config/tirdactyl and add this string to your tridactylrc
+Copy emacs_bindings to ~/.config/tridactyl and add this string to your tridactylrc
 #+begin_src 
 source ~/.config/tridactyl/emacs_bindings
 #+end_src
