@@ -88,7 +88,7 @@ bind = zoom 1
 " Frames
 bind <C-x>50 winclose
 bind <C-x>52 winopen
-bind <C-x><C-u>52 winopen -private
+bind <C-u><C-x>52 winopen -private
 
 " Open links
 bind g fillcmdline open
